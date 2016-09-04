@@ -1,8 +1,8 @@
 package com.polydevops.unit_conversion_calculator.unit;
 
-import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 import com.polydevops.unit_conversion_calculator.UnitGroup;
 import com.polydevops.unit_conversion_calculator.UnitType;
+import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 
 public class Liter extends Unit {
     public Liter(double amount) {
@@ -10,12 +10,12 @@ public class Liter extends Unit {
     }
 
     @Override
-    public UnitType getUnitType() {
-        return UnitType.LITERS;
+    public String getUnitType() {
+        return UnitType.LITER;
     }
 
     @Override
-    public UnitGroup getUnitGroup() {
+    public String getUnitGroup() {
         return UnitGroup.VOLUME;
     }
 

@@ -1,8 +1,8 @@
 package com.polydevops.unit_conversion_calculator.unit;
 
-import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 import com.polydevops.unit_conversion_calculator.UnitGroup;
 import com.polydevops.unit_conversion_calculator.UnitType;
+import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 
 public class Pint extends Unit {
 
@@ -11,12 +11,12 @@ public class Pint extends Unit {
     }
 
     @Override
-    public UnitType getUnitType() {
-        return UnitType.PINTS;
+    public String getUnitType() {
+        return UnitType.PINT;
     }
 
     @Override
-    public UnitGroup getUnitGroup() {
+    public String getUnitGroup() {
         return UnitGroup.VOLUME;
     }
 

@@ -1,8 +1,8 @@
 package com.polydevops.unit_conversion_calculator.unit;
 
-import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 import com.polydevops.unit_conversion_calculator.UnitGroup;
 import com.polydevops.unit_conversion_calculator.UnitType;
+import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 
 /**
  * Created by connor on 5/25/16.
@@ -14,12 +14,12 @@ public class Quart extends Unit {
     }
 
     @Override
-    public UnitType getUnitType() {
-        return UnitType.QUARTS;
+    public String getUnitType() {
+        return UnitType.QUART;
     }
 
     @Override
-    public UnitGroup getUnitGroup() {
+    public String getUnitGroup() {
         return UnitGroup.VOLUME;
     }
 

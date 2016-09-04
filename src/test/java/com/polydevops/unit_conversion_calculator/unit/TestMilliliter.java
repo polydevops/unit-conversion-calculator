@@ -15,8 +15,8 @@ public class TestMilliliter {
 
     @Test
     public void testGetUnitType() {
-        final UnitType expectedUnitType = UnitType.MILLILITERS;
-        final UnitType actualUnitType = new Milliliter(1).getUnitType();
+        final String expectedUnitType = UnitType.MILLILITER;
+        final String actualUnitType = new Milliliter(1).getUnitType();
         assertEquals(expectedUnitType, actualUnitType);
     }
 

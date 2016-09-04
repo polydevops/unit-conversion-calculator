@@ -15,8 +15,8 @@ public class TestLiter {
 
     @Test
     public void testGetUnitType() {
-        final UnitType expectedUnitType = UnitType.LITERS;
-        final UnitType actualUnitType = new Liter(1).getUnitType();
+        final String expectedUnitType = UnitType.LITER;
+        final String actualUnitType = new Liter(1).getUnitType();
         assertEquals(expectedUnitType, actualUnitType);
     }
 

@@ -15,8 +15,8 @@ public class TestPint {
 
     @Test
     public void testGetUnitType() {
-        final UnitType expectedUnitType = UnitType.PINTS;
-        final UnitType actualUnitType = new Pint(1).getUnitType();
+        final String expectedUnitType = UnitType.PINT;
+        final String actualUnitType = new Pint(1).getUnitType();
         assertEquals(expectedUnitType, actualUnitType);
     }
 

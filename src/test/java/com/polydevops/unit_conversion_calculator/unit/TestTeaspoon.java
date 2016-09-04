@@ -12,8 +12,8 @@ public class TestTeaspoon {
 
     @Test
     public void testGetUnitType() {
-        final UnitType expectedUnitType = UnitType.TEASPOONS;
-        final UnitType actualUnitType = new Teaspoon(1).getUnitType();
+        final String expectedUnitType = UnitType.TEASPOON;
+        final String actualUnitType = new Teaspoon(1).getUnitType();
         assertEquals(expectedUnitType, actualUnitType);
     }
 

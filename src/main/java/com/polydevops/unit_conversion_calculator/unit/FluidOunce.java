@@ -1,8 +1,8 @@
 package com.polydevops.unit_conversion_calculator.unit;
 
-import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 import com.polydevops.unit_conversion_calculator.UnitGroup;
 import com.polydevops.unit_conversion_calculator.UnitType;
+import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 
 /**
  * US
@@ -14,12 +14,12 @@ public class FluidOunce extends Unit {
     }
 
     @Override
-    public UnitType getUnitType() {
-        return UnitType.FLUID_OZ;
+    public String getUnitType() {
+        return UnitType.FLUID_OUNCE;
     }
 
     @Override
-    public UnitGroup getUnitGroup() {
+    public String getUnitGroup() {
         return UnitGroup.VOLUME;
     }
 

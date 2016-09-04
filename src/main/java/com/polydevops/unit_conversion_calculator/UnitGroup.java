@@ -1,9 +1,9 @@
 package com.polydevops.unit_conversion_calculator;
 
 /**
- * Created by connor on 6/11/16.
+ * Predefined unit groups
  */
-public enum UnitGroup {
-    VOLUME,
-    MASS
+public class UnitGroup {
+    public static final String VOLUME = "volume";
+    public static final String MASS = "mass";
 }

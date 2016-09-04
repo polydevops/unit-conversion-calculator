@@ -15,8 +15,8 @@ public class TestCup {
 
     @Test
     public void testGetUnitType() {
-        final UnitType expectedUnitType = UnitType.CUPS;
-        final UnitType actualUnitType = new Cup(1).getUnitType();
+        final String expectedUnitType = UnitType.CUP;
+        final String actualUnitType = new Cup(1).getUnitType();
         assertEquals(expectedUnitType, actualUnitType);
     }
 

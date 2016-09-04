@@ -5,32 +5,32 @@ import com.polydevops.unit_conversion_calculator.unit.*;
 /**
  * Creates a Unit with specified @param{unitAmount} from specified @param{unitType}
  */
-public class UnitFactory {
+public class UnitFactory implements IUnitFactory {
 
-    public static Unit getUnit(final UnitType unitType, final double unitAmount) throws Exception {
+    public Unit getUnit(final String unitType, final double unitAmount) {
         switch (unitType) {
-            case GRAMS:
+            case UnitType.GRAM:
                 return new Gram(unitAmount);
-            case OUNCES:
+            case UnitType.OUNCE:
                 return new Ounce(unitAmount);
-            case MILLILITERS:
+            case UnitType.MILLILITER:
                 return new Milliliter(unitAmount);
-            case LITERS:
+            case UnitType.LITER:
                 return new Liter(unitAmount);
-            case TEASPOONS:
+            case UnitType.TEASPOON:
                 return new Teaspoon(unitAmount);
-            case TABLESPOONS:
+            case UnitType.TABLESPOON:
                 return new Tablespoon(unitAmount);
-            case CUPS:
+            case UnitType.CUP:
                 return new Cup(unitAmount);
-            case PINTS:
+            case UnitType.PINT:
                 return new Pint(unitAmount);
-            case QUARTS:
+            case UnitType.QUART:
                 return new Quart(unitAmount);
-            case FLUID_OZ:
+            case UnitType.FLUID_OUNCE:
                 return new FluidOunce(unitAmount);
             default:
-                throw new Exception("Invalid Unit Type");
+                return null;
         }
     }
 }

@@ -1,8 +1,8 @@
 package com.polydevops.unit_conversion_calculator.unit;
 
-import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 import com.polydevops.unit_conversion_calculator.UnitGroup;
 import com.polydevops.unit_conversion_calculator.UnitType;
+import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 
 /**
  * US Customary Cup
@@ -14,12 +14,12 @@ public class Cup extends Unit {
     }
 
     @Override
-    public UnitType getUnitType() {
-        return UnitType.CUPS;
+    public String getUnitType() {
+        return UnitType.CUP;
     }
 
     @Override
-    public UnitGroup getUnitGroup() {
+    public String getUnitGroup() {
         return UnitGroup.VOLUME;
     }
 

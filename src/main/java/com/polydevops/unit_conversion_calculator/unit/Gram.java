@@ -1,8 +1,8 @@
 package com.polydevops.unit_conversion_calculator.unit;
 
-import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 import com.polydevops.unit_conversion_calculator.UnitGroup;
 import com.polydevops.unit_conversion_calculator.UnitType;
+import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 
 public class Gram extends Unit {
 
@@ -11,12 +11,12 @@ public class Gram extends Unit {
     }
 
     @Override
-    public UnitType getUnitType() {
-        return UnitType.GRAMS;
+    public String getUnitType() {
+        return UnitType.GRAM;
     }
 
     @Override
-    public UnitGroup getUnitGroup() {
+    public String getUnitGroup() {
         return UnitGroup.MASS;
     }
 

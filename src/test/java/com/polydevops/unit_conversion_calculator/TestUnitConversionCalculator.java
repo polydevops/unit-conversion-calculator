@@ -7,15 +7,17 @@ import static org.junit.Assert.assertEquals;
 
 public class TestUnitConversionCalculator {
 
+    private UnitConversionCalculator calculator;
+
     @Before
     public void before() {
-
+        calculator = new UnitConversionCalculator();
     }
 
     @Test
     public void testConvertTeaspoonsToTablespoons() {
         final double expected = .333;
-        final double actual = UnitConversionCalculator.convert(1, UnitType.TEASPOONS, UnitType.TABLESPOONS);
+        final double actual = calculator.convert(1, UnitType.TEASPOON, UnitType.TABLESPOON);
         assertEquals(expected, actual, .001);
     }
 }

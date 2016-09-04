@@ -15,8 +15,8 @@ public class TestFluidOunce {
 
     @Test
     public void testGetUnitType() {
-        final UnitType expectedUnitType = UnitType.FLUID_OZ;
-        final UnitType actualUnitType = new FluidOunce(1).getUnitType();
+        final String expectedUnitType = UnitType.FLUID_OUNCE;
+        final String actualUnitType = new FluidOunce(1).getUnitType();
         assertEquals(expectedUnitType, actualUnitType);
     }
 

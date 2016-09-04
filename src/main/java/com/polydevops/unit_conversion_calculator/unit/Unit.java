@@ -1,8 +1,7 @@
 package com.polydevops.unit_conversion_calculator.unit;
 
-import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
-import com.polydevops.unit_conversion_calculator.UnitGroup;
 import com.polydevops.unit_conversion_calculator.UnitType;
+import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 
 public abstract class Unit {
 
@@ -12,8 +11,8 @@ public abstract class Unit {
         value = amount;
     }
 
-    public abstract UnitType getUnitType();
-    public abstract UnitGroup getUnitGroup();
+    public abstract String getUnitType();
+    public abstract String getUnitGroup();
 
     public abstract Gram convertToGrams() throws InvalidConversionException;
     public abstract Ounce convertToOunces() throws InvalidConversionException;
@@ -32,43 +31,36 @@ public abstract class Unit {
         return value;
     }
 
-    public Unit convertTo(UnitType toUnit) {
-        final UnitType fromUnit = getUnitType();
+    public Unit convertTo(java.lang.String toUnit) {
+        final java.lang.String fromUnit = getUnitType();
 
-        // since a UnitType.PIECE is non-deterministic ('piece' has no defined measurement)
-        // we just return the instance
-        if (fromUnit == UnitType.PIECE) {
-            return this;
-        }
-
-        if (fromUnit == toUnit) {
+        if (fromUnit.equals(toUnit)) {
             return this;
         }
 
         try {
             switch (toUnit) {
-                case GRAMS:
+                case UnitType.GRAM:
                     return convertToGrams();
-                case OUNCES:
+                case UnitType.OUNCE:
                     return convertToOunces();
-                case MILLILITERS:
+                case UnitType.MILLILITER:
                     return convertToMilliliters();
-                case LITERS:
+                case UnitType.LITER:
                     return convertToLiters();
-                case TEASPOONS:
+                case UnitType.TEASPOON:
                     return convertToTeaspoons();
-                case TABLESPOONS:
+                case UnitType.TABLESPOON:
                     return convertToTablespoons();
-                case CUPS:
+                case UnitType.CUP:
                     return convertToCups();
-                case PINTS:
+                case UnitType.PINT:
                     return convertToPints();
-                case QUARTS:
+                case UnitType.QUART:
                     return convertToQuarts();
-                case FLUID_OZ:
+                case UnitType.FLUID_OUNCE:
                     return convertToFluidOunces();
                 default:
-                    // TODO
                     return null;
             }
         } catch (InvalidConversionException e) {

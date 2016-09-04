@@ -13,14 +13,14 @@ public class TestTablespoon {
 
     @Test
     public void testGetUnitType() {
-        final UnitType expectedUnitType = UnitType.TABLESPOONS;
-        final UnitType actualUnitType = new Tablespoon(1).getUnitType();
+        final String expectedUnitType = UnitType.TABLESPOON;
+        final String actualUnitType = new Tablespoon(1).getUnitType();
         assertEquals(expectedUnitType, actualUnitType);
     }
 
     @Test(expected = InvalidConversionException.class)
     public void testConvertToGrams() throws InvalidConversionException {
-        final Tablespoon tablespoon = new Tablespoon(1);
+        tablespoon = new Tablespoon(1);
 
         // this call should fail
         tablespoon.convertToGrams().getValue();
@@ -28,7 +28,7 @@ public class TestTablespoon {
 
     @Test(expected = InvalidConversionException.class)
     public void testConvertToOunces() throws InvalidConversionException {
-        final Tablespoon tablespoon = new Tablespoon(1);
+        tablespoon = new Tablespoon(1);
 
         // this call should fail
         tablespoon.convertToOunces().getValue();
@@ -36,7 +36,6 @@ public class TestTablespoon {
 
     @Test
     public void testConvertToMilliliters() {
-        Tablespoon tablespoon;
         double expectedMilliliters;
         double actualMilliliters;
 
@@ -55,7 +54,6 @@ public class TestTablespoon {
 
     @Test
     public void testConvertToLiters() {
-        Tablespoon tablespoon;
         double expectedLiters;
         double actualLiters;
 
@@ -94,7 +92,6 @@ public class TestTablespoon {
 
     @Test
     public void testConvertToTablespoons() {
-        Tablespoon tablespoon;
         double expectedTablespoons;
         double actualTablespoons;
 
@@ -115,7 +112,6 @@ public class TestTablespoon {
 
     @Test
     public void testConvertToCups() {
-        Tablespoon tablespoon;
         double expectedCups;
         double actualCups;
 
@@ -134,7 +130,6 @@ public class TestTablespoon {
 
     @Test
     public void testConvertToPints() {
-        Tablespoon tablespoon;
         double expectedPints;
         double actualPints;
 
@@ -155,7 +150,6 @@ public class TestTablespoon {
 
     @Test
     public void testConvertToQuarts() {
-        Tablespoon tablespoon;
         double expectedQuarts;
         double actualQuarts;
 
@@ -176,7 +170,6 @@ public class TestTablespoon {
 
     @Test
     public void testConvertToFluidOunces() {
-        Tablespoon tablespoon;
         double expectedFluidOunces;
         double actualFluidOunces;
 

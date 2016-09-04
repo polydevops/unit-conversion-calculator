@@ -15,8 +15,8 @@ public class TestQuart {
 
     @Test
     public void testGetUnitType() {
-        final UnitType expectedUnitType = UnitType.QUARTS;
-        final UnitType actualUnitType = new Quart(1).getUnitType();
+        final String expectedUnitType = UnitType.QUART;
+        final String actualUnitType = new Quart(1).getUnitType();
         assertEquals(expectedUnitType, actualUnitType);
     }
 

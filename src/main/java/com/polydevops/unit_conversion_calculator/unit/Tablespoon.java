@@ -58,7 +58,7 @@ public class Tablespoon extends Unit {
 
     @Override
     public Cup convertToCups() {
-        final double cupsToTablespoonsRatio = .0625;
+        final double cupsToTablespoonsRatio = 0.0616115;
         return new Cup(value * cupsToTablespoonsRatio);
     }
 

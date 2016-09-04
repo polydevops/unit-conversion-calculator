@@ -42,7 +42,7 @@ public class Quart extends Unit {
     @Override
     public Liter convertToLiters() {
         final double litersToQuartsRatio = .946353;
-        return new Liter(litersToQuartsRatio);
+        return new Liter(value * litersToQuartsRatio);
     }
 
     @Override

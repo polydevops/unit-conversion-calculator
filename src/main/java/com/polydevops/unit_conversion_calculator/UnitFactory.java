@@ -7,7 +7,7 @@ import com.polydevops.unit_conversion_calculator.unit.*;
  */
 public class UnitFactory {
 
-    public static Unit getUnit(final UnitType unitType, final double unitAmount) {
+    public static Unit getUnit(final UnitType unitType, final double unitAmount) throws Exception {
         switch (unitType) {
             case GRAMS:
                 return new Gram(unitAmount);
@@ -30,7 +30,7 @@ public class UnitFactory {
             case FLUID_OZ:
                 return new FluidOunce(unitAmount);
             default:
-                return new Piece(unitAmount);
+                throw new Exception("Invalid Unit Type");
         }
     }
 }

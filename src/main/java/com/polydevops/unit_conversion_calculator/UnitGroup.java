@@ -5,6 +5,5 @@ package com.polydevops.unit_conversion_calculator;
  */
 public enum UnitGroup {
     VOLUME,
-    MASS,
-    NONDETERMINISTIC
+    MASS
 }

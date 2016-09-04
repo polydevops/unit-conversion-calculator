@@ -19,8 +19,5 @@ public enum UnitType {
     CUPS,
     PINTS,
     QUARTS,
-    FLUID_OZ,
-
-    // NON-DETERMINISIC
-    PIECE
+    FLUID_OZ
 }

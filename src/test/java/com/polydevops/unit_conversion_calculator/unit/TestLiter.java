@@ -4,36 +4,36 @@ import com.polydevops.unit_conversion_calculator.UnitType;
 import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
- * Created by connor on 5/25/16.
+ * Created by connor on 9/4/16.
  */
-public class TestCup {
+public class TestLiter {
 
-    private Cup cup;
+    private Liter liter;
 
     @Test
     public void testGetUnitType() {
-        final UnitType expectedUnitType = UnitType.CUPS;
-        final UnitType actualUnitType = new Cup(1).getUnitType();
+        final UnitType expectedUnitType = UnitType.LITERS;
+        final UnitType actualUnitType = new Liter(1).getUnitType();
         assertEquals(expectedUnitType, actualUnitType);
     }
 
     @Test(expected = InvalidConversionException.class)
     public void testConvertToGrams() throws InvalidConversionException {
-        cup = new Cup(1);
+        liter = new Liter(1);
 
         // this call should fail
-        cup.convertToGrams().getValue();
+        liter.convertToGrams().getValue();
     }
 
     @Test(expected = InvalidConversionException.class)
     public void testConvertToOunces() throws InvalidConversionException {
-        cup = new Cup(1);
+        liter = new Liter(1);
 
         // this call should fail
-        cup.convertToOunces().getValue();
+        liter.convertToOunces().getValue();
     }
 
     @Test
@@ -42,15 +42,15 @@ public class TestCup {
         double actualMilliliters;
 
         // test value 1
-        cup = new Cup(1);
-        expectedMilliliters = 236.588;
-        actualMilliliters = cup.convertToMilliliters().getValue();
+        liter = new Liter(1);
+        expectedMilliliters = 1000;
+        actualMilliliters = liter.convertToMilliliters().getValue();
         assertEquals(expectedMilliliters, actualMilliliters, .001);
 
         // test value 2.5
-        cup = new Cup(2.5);
-        expectedMilliliters = 591.471;
-        actualMilliliters = cup.convertToMilliliters().getValue();
+        liter = new Liter(2.5);
+        expectedMilliliters = 2500;
+        actualMilliliters = liter.convertToMilliliters().getValue();
         assertEquals(expectedMilliliters, actualMilliliters, .001);
     }
 
@@ -60,15 +60,15 @@ public class TestCup {
         double actualLiters;
 
         // test value 1
-        cup = new Cup(1);
-        expectedLiters = 0.236588;
-        actualLiters = cup.convertToLiters().getValue();
+        liter = new Liter(1);
+        expectedLiters = 1;
+        actualLiters = liter.convertToLiters().getValue();
         assertEquals(expectedLiters, actualLiters, .001);
 
         // test value 2.5
-        cup = new Cup(2.5);
-        expectedLiters = 0.591471;
-        actualLiters = cup.convertToLiters().getValue();
+        liter = new Liter(2.5);
+        expectedLiters = 2.5;
+        actualLiters = liter.convertToLiters().getValue();
         assertEquals(expectedLiters, actualLiters, .001);
     }
 
@@ -78,17 +78,17 @@ public class TestCup {
         double actualTeaspoons;
 
         // test value 1
-        cup = new Cup(1);
+        liter = new Liter(1);
 
-        expectedTeaspoons = 48;
-        actualTeaspoons = cup.convertToTeaspoons().getValue();
+        expectedTeaspoons = 202.884;
+        actualTeaspoons = liter.convertToTeaspoons().getValue();
         assertEquals(expectedTeaspoons, actualTeaspoons, .001);
 
         // test value 2.5
-        cup = new Cup(2.5);
+        liter = new Liter(2.5);
 
-        expectedTeaspoons = 120;
-        actualTeaspoons = cup.convertToTeaspoons().getValue();
+        expectedTeaspoons = 507.21;
+        actualTeaspoons = liter.convertToTeaspoons().getValue();
         assertEquals(expectedTeaspoons, actualTeaspoons, .001);
     }
 
@@ -98,17 +98,17 @@ public class TestCup {
         double actualTablespoons;
 
         // test value 1
-        cup = new Cup(1);
+        liter = new Liter(1);
 
-        expectedTablespoons = 16;
-        actualTablespoons = cup.convertToTablespoons().getValue();
+        expectedTablespoons = 67.628;
+        actualTablespoons = liter.convertToTablespoons().getValue();
         assertEquals(expectedTablespoons, actualTablespoons, .001);
 
         // test value 2.5
-        cup = new Cup(2.5);
+        liter = new Liter(2.5);
 
-        expectedTablespoons = 40;
-        actualTablespoons = cup.convertToTablespoons().getValue();
+        expectedTablespoons = 169.07;
+        actualTablespoons = liter.convertToTablespoons().getValue();
         assertEquals(expectedTablespoons, actualTablespoons, .001);
     }
 
@@ -118,16 +118,16 @@ public class TestCup {
         double actualCups;
 
         // test value 1
-        cup = new Cup(1);
+        liter = new Liter(1);
 
-        expectedCups = 1;
-        actualCups = cup.convertToCups().getValue();
+        expectedCups = 4.22675;
+        actualCups = liter.convertToCups().getValue();
         assertEquals(expectedCups, actualCups, .001);
 
         // test value 2.5
-        cup = new Cup(2.5);
-        expectedCups = 2.5;
-        actualCups = cup.convertToCups().getValue();
+        liter = new Liter(2.5);
+        expectedCups = 10.5669;
+        actualCups = liter.convertToCups().getValue();
         assertEquals(expectedCups, actualCups, .001);
     }
 
@@ -137,17 +137,17 @@ public class TestCup {
         double actualPints;
 
         // test value 1
-        cup = new Cup(1);
+        liter = new Liter(1);
 
-        expectedPints = 0.5;
-        actualPints = cup.convertToPints().getValue();
+        expectedPints = 2.11338;
+        actualPints = liter.convertToPints().getValue();
         assertEquals(expectedPints, actualPints, .001);
 
         // test value 2
-        cup = new Cup(2.5);
+        liter = new Liter(2.5);
 
-        expectedPints = 1.25;
-        actualPints = cup.convertToPints().getValue();
+        expectedPints = 5.28344;
+        actualPints = liter.convertToPints().getValue();
         assertEquals(expectedPints, actualPints, .001);
     }
 
@@ -157,17 +157,17 @@ public class TestCup {
         double actualQuarts;
 
         // test value 1
-        cup = new Cup(1);
+        liter = new Liter(1);
 
-        expectedQuarts = 0.25;
-        actualQuarts = cup.convertToQuarts().getValue();
+        expectedQuarts = 1.05669;
+        actualQuarts = liter.convertToQuarts().getValue();
         assertEquals(expectedQuarts, actualQuarts, .001);
 
         // test value 2.5
-        cup = new Cup(2.5);
+        liter = new Liter(2.5);
 
-        expectedQuarts = 0.625;
-        actualQuarts = cup.convertToQuarts().getValue();
+        expectedQuarts = 2.64172;
+        actualQuarts = liter.convertToQuarts().getValue();
         assertEquals(expectedQuarts, actualQuarts, .001);
     }
 
@@ -177,15 +177,15 @@ public class TestCup {
         double actualFluidOunces;
 
         // test value 1
-        cup = new Cup(1);
-        expectedFluidOunces = 8;
-        actualFluidOunces = cup.convertToFluidOunces().getValue();
+        liter = new Liter(1);
+        expectedFluidOunces = 33.814;
+        actualFluidOunces = liter.convertToFluidOunces().getValue();
         assertEquals(expectedFluidOunces, actualFluidOunces, .001);
 
         // test value 2.5
-        cup = new Cup(2.5);
-        expectedFluidOunces = 20;
-        actualFluidOunces = cup.convertToFluidOunces().getValue();
+        liter = new Liter(2.5);
+        expectedFluidOunces = 84.5351;
+        actualFluidOunces = liter.convertToFluidOunces().getValue();
         assertEquals(expectedFluidOunces, actualFluidOunces, .001);
     }
 }

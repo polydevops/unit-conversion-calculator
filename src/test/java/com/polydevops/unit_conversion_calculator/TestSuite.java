@@ -10,11 +10,14 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         TestUnitConversionCalculator.class,
+        TestMilliliter.class,
+        TestLiter.class,
         TestTeaspoon.class,
         TestTablespoon.class,
         TestCup.class,
         TestPint.class,
-        TestQuart.class
+        TestQuart.class,
+        TestFluidOunce.class
 })
 public class TestSuite {
 

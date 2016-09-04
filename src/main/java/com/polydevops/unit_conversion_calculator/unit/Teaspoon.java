@@ -72,7 +72,7 @@ public class Teaspoon extends Unit {
     }
 
     @Override
-    public FluidOunce convertToFluidOunces() throws InvalidConversionException {
+    public FluidOunce convertToFluidOunces() {
         final double fluidOuncesToTeaspoonsRatio = 0.166667;
         return new FluidOunce(value * fluidOuncesToTeaspoonsRatio);
     }

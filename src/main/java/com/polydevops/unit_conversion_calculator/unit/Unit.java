@@ -35,7 +35,7 @@ public abstract class Unit {
     public Unit convertTo(UnitType toUnit) {
         final UnitType fromUnit = getUnitType();
 
-        // since a UnitType.PIECE is nondeterministic ('piece' has no defined measurement)
+        // since a UnitType.PIECE is non-deterministic ('piece' has no defined measurement)
         // we just return the instance
         if (fromUnit == UnitType.PIECE) {
             return this;

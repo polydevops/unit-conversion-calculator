@@ -31,7 +31,7 @@ public class Milliliter extends Unit {
     }
 
     @Override
-    public Milliliter convertToMilliliters() throws InvalidConversionException {
+    public Milliliter convertToMilliliters() {
         return this;
     }
 

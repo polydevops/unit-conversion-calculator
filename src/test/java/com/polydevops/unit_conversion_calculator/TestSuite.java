@@ -9,7 +9,6 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        TestUnitConversionCalculator.class,
         TestMilliliter.class,
         TestLiter.class,
         TestTeaspoon.class,

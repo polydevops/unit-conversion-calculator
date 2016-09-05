@@ -117,13 +117,13 @@ public class TestTablespoon {
 
         // test value 1
         tablespoon = new Tablespoon(1);
-        expectedCups = 0.0616115;
+        expectedCups = .0625;
         actualCups = tablespoon.convertToCups().getValue();
         assertEquals(expectedCups, actualCups, .001);
 
         // test value 2.5
         tablespoon = new Tablespoon(2.5);
-        expectedCups = 0.154029;
+        expectedCups = 0.15625;
         actualCups = tablespoon.convertToCups().getValue();
         assertEquals(expectedCups, actualCups, .001);
     }

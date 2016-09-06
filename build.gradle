@@ -2,6 +2,7 @@ group 'polydevops'
 version '1.0'
 
 apply plugin: 'java'
+apply plugin: 'maven'
 
 tasks.withType(JavaCompile) {
     sourceCompatibility = 1.7

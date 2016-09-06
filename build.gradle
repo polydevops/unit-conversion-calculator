@@ -3,13 +3,11 @@ version '1.0'
 
 apply plugin: 'java'
 
-repositories {
-    mavenCentral()
+tasks.withType(JavaCompile) {
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-
-    sourceCompatibility = 1.7
-    targetCompatibility = 1.7
 }

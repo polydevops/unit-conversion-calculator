@@ -1,5 +1,6 @@
 package com.polydevops.unit_conversion_calculator;
 
+import com.polydevops.unit_conversion_calculator.throwable.InvalidConversionException;
 import com.polydevops.unit_conversion_calculator.unit.Unit;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class UnitConversionCalculator {
         customUnitFactories.add(customUnitFactory);
     }
 
-    public double convert(final double unitAmount, final String fromUnit, final String toUnit) {
+    public double convert(final double unitAmount, final String fromUnit, final String toUnit) throws InvalidConversionException {
         final Unit unit = unitFactory.getUnit(fromUnit, unitAmount);
 
         if (unit == null) {
@@ -33,7 +34,7 @@ public class UnitConversionCalculator {
         }
     }
 
-    private double convertUnitFromCustomFactory(final double unitAmount, final String fromUnit, final String toUnit) {
+    private double convertUnitFromCustomFactory(final double unitAmount, final String fromUnit, final String toUnit) throws InvalidConversionException {
         for (IUnitFactory customUnitFactory: customUnitFactories) {
             final Unit unit = customUnitFactory.getUnit(fromUnit, unitAmount);
             if (unit != null) {
